@@ -61,6 +61,7 @@ class ChromiumHeadless(Browser):
         command = [
             f'{self.executable}',
             '--headless',
+            '--no-sandbox',
             f'--screenshot={os.path.join(output_path, output_file)}',
             f'--window-size={size[0]},{size[1]}',
             *self.flags,
